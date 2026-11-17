@@ -60,8 +60,8 @@ cdc-places-health-dashboard/
 1. Clone the repository and move into it:
 
    ```bash
-   git clone https://github.com/Amy123-hash/cdc-places-health-dashboard.git
-   cd cdc-places-health-dashboard
+ git clone <repository-url>
+cd cdc-places-health-dashboard
    ```
 
 2. Create and activate a virtual environment:
@@ -94,9 +94,9 @@ cdc-places-health-dashboard/
 
 ## Team Members
 
-- Afrah Beshir
-- Van Mont
 - Taylor DiMenna
+- Van Mont
+- Afrah Beshir
 
 ## Project Status
 
