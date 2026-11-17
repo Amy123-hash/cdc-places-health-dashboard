@@ -64,7 +64,7 @@ cdc-places-health-dashboard/
    cd cdc-places-health-dashboard
    ```
 
-2. (Recommended) Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
    ```bash
    python -m venv venv
@@ -78,7 +78,7 @@ cdc-places-health-dashboard/
    pip install -r requirements.txt
    ```
 
-4. Download the data into `data/` (see [Getting the data](#getting-the-data)).
+4. Download the data into `data/`.
 
 5. Explore the data in the notebook:
 
