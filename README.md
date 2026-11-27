@@ -29,10 +29,12 @@ Dataset: https://data.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Hea
 
 ### Getting the data
 
-The raw data is not committed to the repository (see `.gitignore`). To get it:
+The cleaned data is included in `data/places_county_clean_wide.csv`, so you can use it directly.
+
+To regenerate it from the raw CDC file:
 
 1. Download the county-level CSV from the dataset link above.
-2. Save it in the `data/` directory (for example, `data/places_county.csv`).
+2. Run: `python src/clean_data.py <raw_file.csv> data`
 
 ## Technologies
 
