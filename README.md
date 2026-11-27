@@ -29,12 +29,30 @@ Dataset: https://data.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Hea
 
 ### Getting the data
 
-The cleaned data is included in `data/places_county_clean_wide.csv`, so you can use it directly.
+The cleaned data is already included in the repository, so you can use it directly:
 
-To regenerate it from the raw CDC file:
+- `data/places_county_clean_wide.csv`: one row per county with the diabetes, obesity and uninsured percentages (age-adjusted), confidence limits and population. The dashboard loads this file.
+- `data/places_county_clean_long.csv`: one row per county, measure and estimate type, including crude prevalence.
+
+When loading the data in pandas, keep the county code as text so leading zeros are preserved:
+
+```python
+import pandas as pd
+
+df = pd.read_csv("data/places_county_clean_wide.csv", dtype={"locationid": str})
+```
+
+To regenerate the cleaned files from the raw CDC data:
 
 1. Download the county-level CSV from the dataset link above.
-2. Run: `python src/clean_data.py <raw_file.csv> data`
+2. Run:
+
+   ```bash
+   python src/clean_data.py <raw_file.csv> data
+   ```
+
+The script keeps the three dashboard indicators (`DIABETES`, `OBESITY`, `ACCESS2`), removes missing and duplicate rows, and writes both CSVs to the `data/` folder.
+
 
 ## Technologies
 
